@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
 class Palette extends Component {
-
   constructor() {
     super();
-    this.state = {
+    this.state = JSON.parse(localStorage.getItem('colors')) ||
+    {
       colors: ['#FFBA49', '#FF595E', '#8AC926', '#1982C4', '#6A4C93']
     }
   }
@@ -21,6 +21,8 @@ class Palette extends Component {
     this.setState({
       colors: newColors
     })
+    localStorage.setItem('colors', JSON.stringify(this.state))
+    console.log(localStorage)
   }
 
   handleKeyDown(e) {
