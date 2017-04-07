@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import FaLock from 'react-icons/lib/fa/lock';
 
 class Color extends Component {
   handleClick() {
@@ -11,7 +12,9 @@ class Color extends Component {
         className="palette-option"
         onMouseDown={this.handleClick.bind(this)}
         style={{backgroundColor: this.props.color}}>
-        <p>{this.props.color}</p>
+        <br />
+        <p className="hexcode">{this.props.color}</p>
+        <FaLock className="lock-icon" />
       </div>
     )
   }
