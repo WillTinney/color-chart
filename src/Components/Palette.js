@@ -18,12 +18,21 @@ class Palette extends Component {
   }
 
   changePalette() {
-    /* Pushes 5 random new hexcodes to newColors array, sets the palette state */
-    /* and saves to local storage */
+    /* Pushes 5 random new hexcodes to newColors array */
     let newColors = []
     for (var i = 0; i < 5; i++) {
       newColors.push(this.randomColor())
     }
+
+    /* Accounts for locked colors (sets locked color values at correct indexes) */
+    for (var color in this.refs) {
+      var colorObj = this.refs[color];
+      if (colorObj.state.lock === 'locked') {
+        newColors[color.slice(-1)] = colorObj.props.color
+      }
+    }
+
+    /* Sets the palette state and saves to local storage */
     this.setState({
       colors: newColors
     })
@@ -45,8 +54,8 @@ class Palette extends Component {
   render() {
     return (
       <div className={"palette " + this.props.orientation}>
-        {this.state.colors.map(color => {
-          return <Color key={color} color={color} />
+        {this.state.colors.map((color, index) => {
+          return <Color key={index} ref={"color" + (index)} color={color} />
         })}
       </div>
     );

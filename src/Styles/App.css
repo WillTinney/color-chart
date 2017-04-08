@@ -31,13 +31,15 @@
   height: 10vh;
   justify-content: space-around;
   align-items: center;
+  transition: all 0.3s ease-in-out 0s;
 }
 
 .toolbar b {
   font-family: 'Lobster', cursive;
   font-weight: lighter;
   font-size: 24px;
-  margin-left: 12%;
+  color: #787979;
+  margin-left: 10%;
 }
 
 /* Orientation Toggle (borrowed from codepen) */
@@ -97,7 +99,7 @@
   visibility: hidden;
 }
 .pf-toggle input[type='checkbox']:checked + label:before {
-  background: #09c;
+  background: #00BCD4;
 }
 .pf-toggle input[type='checkbox']:checked + label:after {
   left: 50px;
@@ -138,6 +140,11 @@
 .lock-icon:hover {
   cursor: pointer;
   color: rgba(187,196,208,1);
+}
+
+
+.locked {
+  color: #C1C9D4;
 }
 
 /* Footer Styles */
