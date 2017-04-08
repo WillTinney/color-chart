@@ -60,7 +60,8 @@ class Palette extends Component {
     return (
       <div className={"palette " + this.props.orientation}>
         {this.state.colors.map((color, index) => {
-          return <Color key={index} ref={"color" + (index)} index={index} color={color} updateColor={this.updateColor.bind(this)}/>
+          return <Color key={index} ref={"color" + (index)} index={index} color={color}
+            updateColor={this.updateColor.bind(this)}/>
         })}
       </div>
     );

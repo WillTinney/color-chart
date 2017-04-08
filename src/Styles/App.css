@@ -129,32 +129,30 @@
   justify-content: space-around;
   align-items: center;
   font-size: 28px;
-  color: #BBC4D0;
+  /*color: #BBC4D0;*/
 }
 
 .lock-icon {
   font-size: 32px;
-  color: rgba(187,196,208,0.4);
 }
 
 .lock-icon:hover {
   cursor: pointer;
-  color: rgba(187,196,208,1);
+  color: #AAB3BE !important;
 }
 
 .locked {
-  color: #C1C9D4;
+  color: #44484C !important;
 }
 
 /* Color Picker */
 .palette-icon {
-  color: rgba(187,196,208,0.8);
   font-size: 34px;
 }
 
 .palette-icon:hover {
   cursor: pointer;
-  color: rgba(187,196,208,1);
+  color: #AAB3BE !important;
 }
 
 input[type="color" i] {

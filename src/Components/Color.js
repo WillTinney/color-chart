@@ -11,6 +11,22 @@ class Color extends Component {
     }
   }
 
+  setTextColor(hexcode) {
+    /* Determine whether to use light or dark text */
+    let color = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hexcode);
+
+    let r = parseInt(color[1], 16),
+        g = parseInt(color[2], 16),
+        b = parseInt(color[3], 16);
+
+    console.log(r)
+    console.log(g)
+    console.log(b)
+
+    return ((r*0.299 + g*0.587 + b*0.114) > 186 ? '#777D85' : '#D9DEE5')
+
+  }
+
   handleColorChange(e) {
     /* Calls updateColor function from palette */
     this.props.updateColor(e.target.value, this.props.index);
@@ -41,14 +57,15 @@ class Color extends Component {
     return (
       <div
         className="palette-option"
-        style={{backgroundColor: this.props.color}}>
+        style={{backgroundColor: this.props.color, color: this.setTextColor(this.props.color)}}>
         <div>
           <MdPalette className="palette-icon" onClick={this.handlePaletteClick.bind(this)} />
-          <input className={"colorpicker" + this.props.index} type="color" value={this.props.color} onChange={this.handleColorChange.bind(this)}></input>
+          <input className={"colorpicker" + this.props.index} type="color" value={this.props.color}
+            onChange={this.handleColorChange.bind(this)}></input>
         </div>
         <p className="hexcode">{this.props.color}</p>
         <FaLock onClick={this.handleLockClick.bind(this)} className={"lock-icon " + this.state.lock}
-          />
+          style={{color: this.setTextColor(this.props.color)}}/>
       </div>
     )
   }
