@@ -39,6 +39,11 @@ class Palette extends Component {
     localStorage.setItem('colors', JSON.stringify(this.state))
   }
 
+  updateColor(newColor, index) {
+    this.state.colors[index] = newColor
+    this.forceUpdate();
+  }
+
   handleKeyDown(e) {
     /* Calls changePalette function IF the key pressed is spacebar */
     if (e.keyCode === 32) {
@@ -55,7 +60,7 @@ class Palette extends Component {
     return (
       <div className={"palette " + this.props.orientation}>
         {this.state.colors.map((color, index) => {
-          return <Color key={index} ref={"color" + (index)} color={color} />
+          return <Color key={index} ref={"color" + (index)} index={index} color={color} updateColor={this.updateColor.bind(this)}/>
         })}
       </div>
     );

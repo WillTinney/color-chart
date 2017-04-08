@@ -16,7 +16,7 @@ class Header extends Component {
     });
     this.props.toggleFooter();
   }
-  
+
   render() {
     return (
       <div>
@@ -27,7 +27,7 @@ class Header extends Component {
         <div className="toolbar" style={{display: this.state.menuToggle}}>
           <br />
           <b>Toggle Orientation:</b>
-          <div className="pf-toggle">
+          <div className="toggle">
             <input id="toggleid" type="checkbox" name="toggleid"/>
             <label onClick={this.props.swapOrientation} htmlFor="toggleid"></label>
           </div>

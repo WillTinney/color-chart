@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import $ from 'jquery';
+import MdPalette from 'react-icons/lib/md/palette';
 import FaLock from 'react-icons/lib/fa/lock';
 
 class Color extends Component {
@@ -7,6 +9,17 @@ class Color extends Component {
     this.state = {
       lock: ''
     }
+  }
+
+  handleColorChange(e) {
+    /* Calls updateColor function from palette */
+    this.props.updateColor(e.target.value, this.props.index);
+  }
+
+  handlePaletteClick() {
+    /* Opens colorpicker by simulating click on input */
+    let colorpicker = $(".colorpicker" + this.props.index);
+    colorpicker[0].click();
   }
 
   handleLockClick() {
@@ -29,7 +42,10 @@ class Color extends Component {
       <div
         className="palette-option"
         style={{backgroundColor: this.props.color}}>
-        <br />
+        <div>
+          <MdPalette className="palette-icon" onClick={this.handlePaletteClick.bind(this)} />
+          <input className={"colorpicker" + this.props.index} type="color" value={this.props.color} onChange={this.handleColorChange.bind(this)}></input>
+        </div>
         <p className="hexcode">{this.props.color}</p>
         <FaLock onClick={this.handleLockClick.bind(this)} className={"lock-icon " + this.state.lock}
           />

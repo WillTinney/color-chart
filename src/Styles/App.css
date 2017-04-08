@@ -42,15 +42,15 @@
   margin-left: 10%;
 }
 
-/* Orientation Toggle (borrowed from codepen) */
-.pf-toggle {
+/* Orientation Toggle */
+.toggle {
   display: inline-block;
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
   margin-bottom: 12px;
 }
-.pf-toggle label {
+.toggle label {
   display: block;
   position: relative;
   cursor: pointer;
@@ -65,7 +65,7 @@
   height: 26px;
   border-radius: 50px;
 }
-.pf-toggle label::before {
+.toggle label::before {
   display: block;
   position: absolute;
   top: 1px;
@@ -79,7 +79,7 @@
   -webkit-transition: background 0.4s;
   transition: background 0.4s;
 }
-.pf-toggle label::after {
+.toggle label::after {
   display: block;
   position: absolute;
   top: -2px;
@@ -94,14 +94,14 @@
   -webkit-transition: left 0.4s;
   transition: left 0.4s;
 }
-.pf-toggle input[type='checkbox'] {
+.toggle input[type='checkbox'] {
   margin: -9999px;
   visibility: hidden;
 }
-.pf-toggle input[type='checkbox']:checked + label:before {
+.toggle input[type='checkbox']:checked + label:before {
   background: #00BCD4;
 }
-.pf-toggle input[type='checkbox']:checked + label:after {
+.toggle input[type='checkbox']:checked + label:after {
   left: 50px;
 }
 
@@ -142,9 +142,23 @@
   color: rgba(187,196,208,1);
 }
 
-
 .locked {
   color: #C1C9D4;
+}
+
+/* Color Picker */
+.palette-icon {
+  color: rgba(187,196,208,0.8);
+  font-size: 34px;
+}
+
+.palette-icon:hover {
+  cursor: pointer;
+  color: rgba(187,196,208,1);
+}
+
+input[type="color" i] {
+  display: none;
 }
 
 /* Footer Styles */
