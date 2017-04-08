@@ -129,7 +129,6 @@
   justify-content: space-around;
   align-items: center;
   font-size: 28px;
-  /*color: #BBC4D0;*/
 }
 
 .lock-icon {
@@ -187,6 +186,9 @@ input[type="color" i] {
 /* Media Queries */
 @media (max-width: 769px) {
   .vertical .hexcode {
+    display: none;
+  }
+  .vertical .palette-icon {
     display: none;
   }
 }

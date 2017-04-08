@@ -14,17 +14,10 @@ class Color extends Component {
   setTextColor(hexcode) {
     /* Determine whether to use light or dark text */
     let color = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hexcode);
-
     let r = parseInt(color[1], 16),
         g = parseInt(color[2], 16),
         b = parseInt(color[3], 16);
-
-    console.log(r)
-    console.log(g)
-    console.log(b)
-
-    return ((r*0.299 + g*0.587 + b*0.114) > 186 ? '#777D85' : '#D9DEE5')
-
+    return ((r*0.299 + g*0.587 + b*0.114) > 186 ? '#898F98' : '#D9DEE5')
   }
 
   handleColorChange(e) {
@@ -41,12 +34,10 @@ class Color extends Component {
   handleLockClick() {
     /* Swaps lock state of color on icon press */
     if (this.state.lock === '') {
-      console.log('lock');
       this.setState({
         lock: 'locked'
       })
     } else {
-      console.log('unlock');
       this.setState({
         lock: ''
       })
