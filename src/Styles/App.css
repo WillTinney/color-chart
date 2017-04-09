@@ -15,23 +15,6 @@ body {
   font-family: sans-serif;
 }
 
-:focus {
-  outline: none;
-  outline-style: none;
-}
-
-::-moz-focus-inner {
-  border:0;
-}
-
-::selection {
-    background-color: transparent;
-}
-
-::-moz-selection {
-    background-color: transparent;
-}
-
 /* Header */
 .header {
   text-align: center;
@@ -50,7 +33,9 @@ body {
 
 .header-icon {
   font-size: 28px;
-  color: rgba(255,255,255,0.6)
+  color: rgba(255,255,255,0.6);
+  position: absolute;
+  top: 30%;
 }
 
 .header-icon:hover {
@@ -59,14 +44,10 @@ body {
 }
 
 .color-toggle {
-  position: absolute;
-  top: 30%;
   left: 25px;
 }
 
 .menu-toggle {
-  position: absolute;
-  top: 30%;
   right: 25px;
 }
 
@@ -285,5 +266,17 @@ input[type="color" i] {
   .lock-icon:hover {
     cursor: pointer;
     color: #44484C !important;
+  }
+}
+
+@media (max-width: 600px) and (orientation:landscape) {
+  .header h1 {
+    font-size: 20px;
+  }
+  .header-icon {
+    font-size: 18px;
+  }
+  .toolbar button {
+    padding: 2px 15px;
   }
 }
