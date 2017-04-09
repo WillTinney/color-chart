@@ -7,6 +7,12 @@ html {
   user-select: none;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
 /* Header */
 .header {
   text-align: center;
@@ -259,4 +265,21 @@ input[type="color" i] {
   .footer p {
     margin-top: 4vh;
   }
+}
+
+/* Highlighting/Clicking fixes for mobile */
+:focus {
+  outline:none;
+}
+::-moz-focus-inner {
+  border:0;
+}
+
+*::selection
+{
+    background-color:transparent;
+}
+*::-moz-selection
+{
+    background-color:transparent;
 }
