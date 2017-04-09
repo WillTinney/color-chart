@@ -209,7 +209,6 @@ input[type="color" i] {
 
 /* Footer Styles */
 .footer {
-  text-align: center;
   width: 100%;
   height: 10vh;
   background: #00BCD4;
@@ -218,12 +217,16 @@ input[type="color" i] {
   box-shadow: 0 -3px 4px rgba(145,145,145,0.3);
 }
 
-.footer p {
-  margin-top: 3vh;
+.footer a {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-decoration: none;
 }
 
-.footer p:hover {
-  cursor: pointer;
+.footer a:hover {
   text-decoration: underline;
 }
 

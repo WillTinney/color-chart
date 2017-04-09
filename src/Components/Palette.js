@@ -40,6 +40,7 @@ class Palette extends Component {
   }
 
   updateColor(newColor, index) {
+    /* Sets index of state color to changed color choice */
     this.state.colors[index] = newColor
     this.forceUpdate();
   }

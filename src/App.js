@@ -14,6 +14,7 @@ class App extends Component {
   }
 
   toggleColors() {
+    /* Calls change palette method in Palette component */
     this.refs.palette.changePalette();
   }
 

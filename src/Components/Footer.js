@@ -5,7 +5,7 @@ class Footer extends Component {
   render() {
     return (
       <div className="footer" style={{display: this.props.visibility}}>
-        <p><FaGithub id="github-icon" />Developed by Will Tinney</p>
+        <a href="https://github.com/WillTinney/color-chart" target="blank"><FaGithub id="github-icon" />Developed by Will Tinney</a>
       </div>
     )
   }
