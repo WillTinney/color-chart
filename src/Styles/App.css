@@ -96,13 +96,6 @@ body {
   background: none;
 }
 
-.toolbar button:hover {
-  transition: all 0.3s ease-in-out 0s;
-  cursor: pointer;
-  background: #00BCD4;
-  color: white;
-}
-
 .toolbar button:active {
   box-shadow: none;
 }
@@ -283,5 +276,14 @@ input[type="color" i] {
   }
   .footer p {
     margin-top: 4vh;
+  }
+}
+
+@media (min-width: 1000px) {
+  .toolbar button:hover {
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    background: #00BCD4;
+    color: white;
   }
 }
