@@ -1,4 +1,6 @@
+/* Core Styles and highlighting/clicking fixes for mobile */
 html {
+  -webkit-tap-highlight-color:transparent;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -11,6 +13,23 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+}
+
+:focus {
+  outline: none;
+  outline-style: none;
+}
+
+::-moz-focus-inner {
+  border:0;
+}
+
+::selection {
+    background-color: transparent;
+}
+
+::-moz-selection {
+    background-color: transparent;
 }
 
 /* Header */
@@ -265,21 +284,4 @@ input[type="color" i] {
   .footer p {
     margin-top: 4vh;
   }
-}
-
-/* Highlighting/Clicking fixes for mobile */
-:focus {
-  outline:none;
-}
-::-moz-focus-inner {
-  border:0;
-}
-
-*::selection
-{
-    background-color:transparent;
-}
-*::-moz-selection
-{
-    background-color:transparent;
 }
