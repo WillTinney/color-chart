@@ -55,7 +55,7 @@ class Color extends Component {
             onChange={this.handleColorChange.bind(this)}></input>
         </div>
         <p className="hexcode">{this.props.color}</p>
-        <FaLock onMouseDown={this.handleLockClick.bind(this)} className={"lock-icon " + this.state.lock}
+        <FaLock onClick={this.handleLockClick.bind(this)} className={"lock-icon " + this.state.lock}
           style={{color: this.setTextColor(this.props.color)}}/>
       </div>
     )
