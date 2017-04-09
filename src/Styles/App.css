@@ -96,6 +96,13 @@ body {
   background: none;
 }
 
+.toolbar button:hover {
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  background: #00BCD4;
+  color: white;
+}
+
 .toolbar button:active {
   box-shadow: none;
 }
@@ -202,11 +209,6 @@ body {
   font-size: 32px;
 }
 
-.lock-icon:hover {
-  cursor: pointer;
-  color: #44484C !important;
-}
-
 .locked {
   color: #44484C !important;
 }
@@ -279,11 +281,9 @@ input[type="color" i] {
   }
 }
 
-@media (min-width: 1000px) {
-  .toolbar button:hover {
-    transition: all 0.3s ease-in-out 0s;
+@media (min-width: 1200px) {
+  .lock-icon:hover {
     cursor: pointer;
-    background: #00BCD4;
-    color: white;
+    color: #44484C !important;
   }
 }
