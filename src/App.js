@@ -13,6 +13,10 @@ class App extends Component {
     }
   }
 
+  toggleColors() {
+    this.refs.palette.changePalette();
+  }
+
   swapOrientation() {
     /* Swaps state of orientation */
     this.setState({
@@ -31,9 +35,10 @@ class App extends Component {
     return (
       <div className="App">
         <Header
+          toggleColors={this.toggleColors.bind(this)}
           swapOrientation={this.swapOrientation.bind(this)}
           toggleFooter={this.toggleFooter.bind(this)} />
-        <Palette orientation={this.state.orientation} />
+        <Palette ref="palette" orientation={this.state.orientation} />
         <Footer visibility={this.state.footerVisibility} />
       </div>
     );
