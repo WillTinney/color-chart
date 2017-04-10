@@ -258,6 +258,10 @@ input[type="color" i] {
   .header h1 {
     font-size: 42px;
   }
+  .color-toggle {
+    font-size: 34px;
+    left: 40px;
+  }
   .menu-toggle {
     font-size: 38px;
     right: 40px;
